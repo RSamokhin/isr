@@ -672,6 +672,13 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
 
 .dashboard__chart {
   width: 700px;
-  height: 400px;
+  height: 500px;
+  vertical-align: top;
   display: inline-block;
   text-align: center; }
+
+.dashboard__header {
+  margin: 0; }
+
+.dashboard__chart-container {
+  height: calc(100% - 30px); }

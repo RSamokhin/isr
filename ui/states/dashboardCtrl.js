@@ -12,7 +12,6 @@ function configureChart(configureFn, getDataFn) {
     configureFn(lineChart);
 
     getDataFn().then(function(data) {
-        console.log("Data", data.data);
         lineChart.data = data.data;
     }, function(err) {
         console.error("There was an error");

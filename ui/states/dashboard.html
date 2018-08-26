@@ -1,14 +1,20 @@
 <div>
     <div class="dashboard__chart">
-        <h2>Total daily pudding items sold</h2>
-        <div line-chart ng-model="totalDailyItemsSoldChart"></div>
+        <h2 class="dashboard__header">Total daily pudding items sold</h2>
+        <div class="dashboard__chart-container">
+            <div line-chart ng-model="totalDailyItemsSoldChart"></div>
+        </div>
     </div>
     <div class="dashboard__chart">
-        <h2>Average daily pudding items sold per customer</h2>
-        <div line-chart ng-model="averageDailyPuddingItemsPerCustomerChart"></div>
+        <h2 class="dashboard__header">Average daily pudding items sold per customer</h2>
+        <div class="dashboard__chart-container">
+            <div line-chart ng-model="averageDailyPuddingItemsPerCustomerChart"></div>
+        </div>
     </div>
     <div class="dashboard__chart">
-        <h2>Total daily item sales per pudding</h2>
-        <div line-chart ng-model="totalDailyItemSalesPerPuddingChart"></div>
+        <h2 class="dashboard__header">Total daily item sales per pudding</h2>
+        <div class="dashboard__chart-container">
+            <div line-chart ng-model="totalDailyItemSalesPerPuddingChart"></div>
+        </div>
     </div>
 </div>
