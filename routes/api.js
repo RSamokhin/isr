@@ -1,16 +1,34 @@
 var express = require('express');
 var router = express.Router();
-var dal = require('../dataAccessLayer');
+var {
+    getTotalDailyItemsSold
+} = require('../dataLayer/DataAccessLayer');
 
-// a data api
 router.get('/example', function(req, res) {
-    dal.getExampleItemData()
-    .then(function(result) {
-        res.json(result);
-    })
-    .fail(function(err) {
-        res.status(500).send(result);
-    })
+    getTotalDailyItemsSold()
+        .then(function(result) {
+            res
+                .status(200)
+                .json(result);
+        }, function(err) {
+            res
+                .status(500)
+                .send(err);
+        })
+        .catch(err => {
+            res
+                .status(500)
+                .send(err);;
+        });
 });
+
+
+
+// 1) Total daily pudding items sold
+// 2) Average daily pudding items sold per customer
+// 3) Total daily item sales, split into a line for each pudding item (Dani, Milki etc)
+
+//customerId,item,count,date
+// 2993,Dani,4,02/06/2016
 
 module.exports = router;
