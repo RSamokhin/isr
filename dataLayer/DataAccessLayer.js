@@ -23,8 +23,8 @@ DataAccessLayer.getTotalDailyItemsSold = function () {
     return provideAllData().then((data) => {
         const keys = Array.from(new Set(data.map(deal => deal.date)));
         const values = keys.map(date => data
-            .filter(deal => deal.date === date)
-            .reduce((prev, deal) => prev += deal.count, 0)
+            .filter(deal => deal.date === date) // getting only necessary date
+            .reduce((prev, deal) => prev += deal.count, 0) // getting total sold
         );
 
         return [
@@ -35,7 +35,18 @@ DataAccessLayer.getTotalDailyItemsSold = function () {
 
 DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
     return provideAllData().then((data) => {
-        
+        const keys = Array.from(new Set(data.map(deal => deal.date)));
+        const values = keys.map(date => data
+            .filter(deal => deal.date === date) // getting only necessary date
+            .reduce((prev, deal) => prev += deal.count, 0) // getting total sold
+        ).map((soldPerDay, dayIndex) => {
+            // good idea further to cache
+            const customersCount = Array.from(new Set(data
+                .filter(deal => deal.date === keys[dayIndex])
+                .map(deal => deal.customerId)
+            )).length;
+            return soldPerDay / customersCount;
+        });
 
         return [
             DataAccessLayer.generateSequence('Average daily pudding items sold per customer', keys, values)
@@ -44,6 +55,7 @@ DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
 }
 
 DataAccessLayer.getTotalDailyItemSalesPerPudding = function () {
+    // good idea to add providers ith prefiltered data
     return provideAllData().then((data) => {
         // getting distinct item
         return Array
