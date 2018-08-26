@@ -15,7 +15,7 @@ DataAccessLayer.generateSequence = function (seqName, seqKeys, seqValues) {
     });
     return {
         key: seqName,
-        data: data
+        values: data
     }
 }
 
@@ -41,7 +41,16 @@ DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
     });
 }
 
-
+DataAccessLayer.getTotalDailyItemSalesPerPudding = function () {
+    return provideAllData().then((data) => {
+        const keys = Array.from(new Set(data.map(deal => deal.date)));
+        const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
+        
+        return [
+            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
+        ];
+    });
+}
 
 //
 
