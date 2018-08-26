@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6177ec2-71e0-4f66-aa01-8915ca8fdab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/build/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/build/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/states/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/states/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/stylesheets/scss/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ui/stylesheets/scss/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/states/dashboardCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/states/dashboardCtrl.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,7 +28,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="csv" value="1" />
-          <entry key="ejs" value="2" />
+          <entry key="ejs" value="3" />
           <entry key="html" value="2" />
           <entry key="js" value="21" />
           <entry key="json" value="5" />
@@ -41,7 +39,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="EJS" value="2" />
+          <entry key="EJS" value="3" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="21" />
@@ -53,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="140" />
-          <entry key="js" value="560" />
+          <entry key="js" value="561" />
           <entry key="scss" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="140" />
-          <entry key="JavaScript" value="560" />
+          <entry key="JavaScript" value="561" />
           <entry key="SCSS" value="128" />
         </counts>
       </usages-collector>
@@ -87,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui/states/dashboardCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -113,7 +111,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/stylesheets/scss/custom.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -123,10 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataLayer/DataAccessLayer.js">
+        <entry file="file://$PROJECT_DIR$/ui/common/main_page/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -172,9 +170,10 @@
         <option value="$PROJECT_DIR$/ui/common/data_manager/DataService.js" />
         <option value="$PROJECT_DIR$/ui/common/aacoc_charts/lineChart/lineChart.js" />
         <option value="$PROJECT_DIR$/ui/stylesheets/scss/components.scss" />
-        <option value="$PROJECT_DIR$/ui/states/dashboardCtrl.js" />
         <option value="$PROJECT_DIR$/ui/states/dashboard.html" />
         <option value="$PROJECT_DIR$/ui/stylesheets/scss/custom.scss" />
+        <option value="$PROJECT_DIR$/ui/common/main_page/index.ejs" />
+        <option value="$PROJECT_DIR$/ui/states/dashboardCtrl.js" />
       </list>
     </option>
   </component>
@@ -362,18 +361,18 @@
       <updated>1535282421814</updated>
       <workItem from="1535282423131" duration="197000" />
       <workItem from="1535282656487" duration="140000" />
-      <workItem from="1535282814952" duration="7785000" />
+      <workItem from="1535282814952" duration="8051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8122000" />
+    <option name="totallyTimeSpent" value="8388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="948" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20735383" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20735383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -388,7 +387,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33060747" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33060747" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -440,11 +439,6 @@
         <state relative-caret-position="52">
           <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/common/main_page/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/vendor/bower_components/angular-chart.js/README.md">
@@ -544,13 +538,6 @@
     <entry file="file://$PROJECT_DIR$/ui/stylesheets/scss/module.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/states/dashboardCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/states/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -562,6 +549,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/common/main_page/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/states/dashboardCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
         </state>
       </provider>
     </entry>
