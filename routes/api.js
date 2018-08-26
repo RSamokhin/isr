@@ -7,6 +7,35 @@ const {
     getTotalDailyItemSalesPerPudding
 } = require('../dataLayer/DataAccessLayer');
 
+
+const apiConfig = require('./api.config');
+/* 
+// New Router builder. Need test
+
+Object.keys(apiConfig).forEach(method => {
+    apiConfig[method].forEach(rest => {
+        console.log(method, rest, rest.path);
+        router[method](rest.path), function(req, res) {
+            rest.func()
+                .then(function(result) {
+                    res
+                        .status(200)
+                        .json(result);
+                }, function(err) {
+                    res
+                        .status(500)
+                        .send(err);
+                })
+                .catch(err => {
+                    res
+                        .status(500)
+                        .send(err);;
+                });
+        };
+    })
+}); 
+*/
+
 router.get('/total_daily_items_sold', function(req, res) {
     getTotalDailyItemsSold()
         .then(function(result) {
