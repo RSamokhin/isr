@@ -1,16 +1,14 @@
-<div layout="column" style="padding: 20px;">
-    <div layout="row" style="height: 400px;">
-        <div flex>
-            <h2>An Example Line Chart</h2>
-            <div line-chart ng-model="lineChart"></div>
-        </div>
-        <div flex>
-        </div>
+<div>
+    <div class="dashboard__chart">
+        <h2>Total daily pudding items sold</h2>
+        <div line-chart ng-model="totalDailyItemsSoldChart"></div>
     </div>
-    <div layout="row" style="height: 400px;">
-        <div flex>
-        </div>
-        <div flex>
-        </div>
+    <div class="dashboard__chart">
+        <h2>Average daily pudding items sold per customer</h2>
+        <div line-chart ng-model="averageDailyPuddingItemsPerCustomerChart"></div>
+    </div>
+    <div class="dashboard__chart">
+        <h2>Total daily item sales per pudding</h2>
+        <div line-chart ng-model="totalDailyItemSalesPerPuddingChart"></div>
     </div>
 </div>
