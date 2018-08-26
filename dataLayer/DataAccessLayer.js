@@ -22,33 +22,41 @@ DataAccessLayer.generateSequence = function (seqName, seqKeys, seqValues) {
 DataAccessLayer.getTotalDailyItemsSold = function () {
     return provideAllData().then((data) => {
         const keys = Array.from(new Set(data.map(deal => deal.date)));
-        const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
-        
+        const values = keys.map(date => data
+            .filter(deal => deal.date === date)
+            .reduce((prev, deal) => prev += deal.count, 0)
+        );
+
         return [
-            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
+            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, values)
         ];
     });
 }
 
 DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
     return provideAllData().then((data) => {
-        const keys = Array.from(new Set(data.map(deal => deal.date)));
-        const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
         
+
         return [
-            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
+            DataAccessLayer.generateSequence('Average daily pudding items sold per customer', keys, values)
         ];
     });
 }
 
 DataAccessLayer.getTotalDailyItemSalesPerPudding = function () {
     return provideAllData().then((data) => {
-        const keys = Array.from(new Set(data.map(deal => deal.date)));
-        const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
-        
-        return [
-            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
-        ];
+        // getting distinct item
+        return Array
+            .from(new Set(data.map(deal => deal.item)))
+            .map(itemName => {
+                const filteredData = data.filter(deal => deal.item === itemName);
+                const keys = Array.from(new Set(filteredData.map(deal => deal.date)));
+                const values = keys.map(date => filteredData
+                    .filter(deal => deal.date === date)
+                    .reduce((prev, deal) => prev += deal.count, 0)
+                );                
+                return DataAccessLayer.generateSequence(itemName, keys, values);
+            });
     });
 }
 
