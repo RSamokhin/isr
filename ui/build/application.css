@@ -347,7 +347,7 @@ body, html {
   font-family: 'Open Sans', sans-serif !important;
   min-height: 100%;
   font-size: 13px;
-  overflow: hidden;
+  overflow: auto;
   color: #111;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility; }
@@ -669,3 +669,9 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
 .chart-container {
   width: 100%;
   height: calc(100% - 30px); }
+
+.dashboard__chart {
+  width: 700px;
+  height: 400px;
+  display: inline-block;
+  text-align: center; }

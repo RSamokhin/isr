@@ -1,19 +1,39 @@
+
+
+function configureChart(configureFn, getDataFn) {
+
+    var lineChart = {};
+    lineChart.labelX = "Date";
+    lineChart.labelY = "# Items Sold";
+    lineChart.guidelinesX = false;
+    lineChart.guidelinesY = true;
+    lineChart.formatY = "f";
+    lineChart.legend = "bottom";
+    configureFn(lineChart);
+
+    getDataFn().then(function(data) {
+        console.log("Data", data.data);
+        lineChart.data = data.data;
+    }, function(err) {
+        console.error("There was an error");
+    });
+
+    return lineChart;
+}
+
 angular.module('myApp')
 .controller('dashboardCtrl', ['$scope', 'DataService', function($scope, DataService) {
 
-    $scope.lineChart = {};
-    $scope.lineChart.labelX = "Date";
-    $scope.lineChart.labelY = "# Items Sold";
-    $scope.lineChart.guidelinesX = false;
-    $scope.lineChart.guidelinesY = true;
-    $scope.lineChart.formatY = "f";
-    $scope.lineChart.legend = "bottom";
+    $scope.totalDailyItemsSoldChart = configureChart(function(lineChart) {
+        lineChart.labelY = "# Items Sold";
+    }, DataService.getTotalDailyItemsSold);
 
-    DataService.getExampleData().then(function(data) {
-        console.log("Data", data.data);
-        $scope.lineChart.data = [{key: "Sales", values: data.data}];
-    }).catch(function(err) {
-        console.error("There was an error");
-    })
+    $scope.averageDailyPuddingItemsPerCustomerChart = configureChart(function(lineChart) {
+        lineChart.labelY = "# Sold per customer";
+    }, DataService.getAverageDailyPuddingItemsPerCustomer);
 
-}])
+    $scope.totalDailyItemSalesPerPuddingChart = configureChart(function(lineChart) {
+        lineChart.labelY = "# Sales per pudding";
+    }, DataService.getTotalDailyItemSalesPerPudding);
+
+}]);
