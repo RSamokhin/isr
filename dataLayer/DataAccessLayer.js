@@ -30,16 +30,16 @@ DataAccessLayer.getTotalDailyItemsSold = function () {
     });
 }
 
-// DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
-//     return provideAllData().then((data) => {
-//         const keys = Array.from(new Set(data.map(deal => deal.date)));
-//         const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
+DataAccessLayer.getAverageDailyPuddingItemsPerCustomer = function () {
+    return provideAllData().then((data) => {
+        const keys = Array.from(new Set(data.map(deal => deal.date)));
+        const vaues = keys.map(date => data.filter(deal => deal.date === date).length);
         
-//         return [
-//             DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
-//         ];
-//     });
-// }
+        return [
+            DataAccessLayer.generateSequence('Total Daily Items Sold', keys, vaues)
+        ];
+    });
+}
 
 
 

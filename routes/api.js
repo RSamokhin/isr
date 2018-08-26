@@ -4,7 +4,7 @@ var {
     getTotalDailyItemsSold
 } = require('../dataLayer/DataAccessLayer');
 
-router.get('/api/total_daily_items_sold', function(req, res) {
+router.get('/total_daily_items_sold', function(req, res) {
     getTotalDailyItemsSold()
         .then(function(result) {
             res
@@ -22,7 +22,7 @@ router.get('/api/total_daily_items_sold', function(req, res) {
         });
 });
 
-router.get('/api/average_daily_pudding_items_per_customer', function(req, res) {
+router.get('/average_daily_pudding_items_per_customer', function(req, res) {
     getTotalDailyItemsSold()
         .then(function(result) {
             res
@@ -40,7 +40,7 @@ router.get('/api/average_daily_pudding_items_per_customer', function(req, res) {
         });
 });
 
-router.get('/api/total_daily_item_sales_per_pudding', function(req, res) {
+router.get('/total_daily_item_sales_per_pudding', function(req, res) {
     getTotalDailyItemsSold()
         .then(function(result) {
             res
