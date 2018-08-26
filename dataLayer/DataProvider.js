@@ -3,6 +3,7 @@ const fs = require("fs");
 const Deal = require('../models/Deal');
 
 class DataProvider {}
+
 DataProvider.provideAllData = function () {
     return new Promise(function(resolve, reject) {
         fs.readFile('./data/data.csv', 'utf-8', function(err, data) {

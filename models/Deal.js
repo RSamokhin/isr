@@ -1,9 +1,11 @@
+const moment = require('moment');
+
 class Deal {
     constructor(customerId, item, count, date) {
         this.customerId = customerId;
         this.item = item;
         this.count = parseInt(count);
-        this.date = date;
+        this.date = moment(date, 'DD/MM/YYYY').format("DD MMM");
     }
 
     toJson () {

@@ -60,18 +60,4 @@ DataAccessLayer.getTotalDailyItemSalesPerPudding = function () {
     });
 }
 
-//
-
-// getTotalDailyItemsSold: createApiService('total_daily_items_sold'),
-//         getAverageDailyPuddingItemsPerCustomer: createApiService('average_daily_pudding_items_per_customer'),
-//         getTotalDailyItemSalesPerPudding: createApiService('total_daily_item_sales_per_pudding')
-
-// /api/total_daily_item_sales_per_pudding
-
-// 1) Total daily pudding items sold
-// 2) Average daily pudding items sold per customer
-// 3) Total daily item sales, split into a line for each pudding item (Dani, Milki etc)
-
-//customerId,item,count,date
-// 2993,Dani,4,02/06/2016
 module.exports = DataAccessLayer;
